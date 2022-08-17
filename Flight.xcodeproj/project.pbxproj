@@ -20,6 +20,9 @@
 		CB92834428ACC9100048439A /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834328ACC9100048439A /* ServiceProtocol.swift */; };
 		CB92834628ACC99E0048439A /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834528ACC99E0048439A /* StationsViewModel.swift */; };
 		CB92834928ACCF080048439A /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834828ACCF080048439A /* DependencyProvider.swift */; };
+		CB92834C28ACD74E0048439A /* StationsCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */; };
+		CB92834E28ACD7980048439A /* StationsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834D28ACD7980048439A /* StationsCollectionCell.swift */; };
+		CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		CB92834328ACC9100048439A /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		CB92834528ACC99E0048439A /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
 		CB92834828ACCF080048439A /* DependencyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		CB92834D28ACD7980048439A /* StationsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCollectionCell.swift; sourceTree = "<group>"; };
+		CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StationsController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 		CB92831828ACC1A00048439A /* Flight */ = {
 			isa = PBXGroup;
 			children = (
+				CB92834A28ACD72E0048439A /* Views */,
 				CB92833928ACC3670048439A /* Networks */,
 				CB92833828ACC35D0048439A /* ViewModels */,
 				CB92833728ACC3560048439A /* Models */,
@@ -113,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				CB92833128ACC2A50048439A /* UIColor+Extensions.swift */,
+				CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */,
 			);
 			path = "Utils+Extensions";
 			sourceTree = "<group>";
@@ -149,6 +157,15 @@
 				CB92834828ACCF080048439A /* DependencyProvider.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		CB92834A28ACD72E0048439A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */,
+				CB92834D28ACD7980048439A /* StationsCollectionCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +248,11 @@
 				CB92834028ACC7940048439A /* Service.swift in Sources */,
 				CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */,
 				CB92834628ACC99E0048439A /* StationsViewModel.swift in Sources */,
+				CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */,
+				CB92834E28ACD7980048439A /* StationsCollectionCell.swift in Sources */,
 				CB92834928ACCF080048439A /* DependencyProvider.swift in Sources */,
 				CB92833E28ACC7600048439A /* NetworkError.swift in Sources */,
+				CB92834C28ACD74E0048439A /* StationsCollectionFlowLayout.swift in Sources */,
 				CB92833228ACC2A50048439A /* UIColor+Extensions.swift in Sources */,
 				CB92834428ACC9100048439A /* ServiceProtocol.swift in Sources */,
 				CB92834228ACC8340048439A /* Stations.swift in Sources */,
