@@ -15,6 +15,10 @@
 		CB92833428ACC2E30048439A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833328ACC2E30048439A /* NavigationController.swift */; };
 		CB92833628ACC3060048439A /* StationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833528ACC3060048439A /* StationsController.swift */; };
 		CB92833C28ACC49D0048439A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB92833B28ACC49D0048439A /* Alamofire */; };
+		CB92833E28ACC7600048439A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833D28ACC7600048439A /* NetworkError.swift */; };
+		CB92834028ACC7940048439A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833F28ACC7940048439A /* Service.swift */; };
+		CB92834228ACC8340048439A /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834128ACC8340048439A /* Stations.swift */; };
+		CB92834428ACC9100048439A /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834328ACC9100048439A /* ServiceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		CB92833128ACC2A50048439A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		CB92833328ACC2E30048439A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CB92833528ACC3060048439A /* StationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsController.swift; sourceTree = "<group>"; };
+		CB92833D28ACC7600048439A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CB92833F28ACC7940048439A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CB92834128ACC8340048439A /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		CB92834328ACC9100048439A /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 		CB92833728ACC3560048439A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB92834128ACC8340048439A /* Stations.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -124,6 +133,9 @@
 		CB92833928ACC3670048439A /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				CB92833D28ACC7600048439A /* NetworkError.swift */,
+				CB92833F28ACC7940048439A /* Service.swift */,
+				CB92834328ACC9100048439A /* ServiceProtocol.swift */,
 			);
 			path = Networks;
 			sourceTree = "<group>";
@@ -205,9 +217,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB92833628ACC3060048439A /* StationsController.swift in Sources */,
+				CB92834028ACC7940048439A /* Service.swift in Sources */,
 				CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */,
 				CB92833428ACC2E30048439A /* NavigationController.swift in Sources */,
+				CB92833E28ACC7600048439A /* NetworkError.swift in Sources */,
 				CB92833228ACC2A50048439A /* UIColor+Extensions.swift in Sources */,
+				CB92834428ACC9100048439A /* ServiceProtocol.swift in Sources */,
+				CB92834228ACC8340048439A /* Stations.swift in Sources */,
 				CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
