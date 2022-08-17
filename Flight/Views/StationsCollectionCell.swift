@@ -52,6 +52,7 @@ class StationsCollectionCell: UICollectionViewCell {
         image.contentMode  = .scaleAspectFill
         image.clipsToBounds = true
         image.layer.cornerRadius = 10
+        image.backgroundColor = .systemGroupedBackground
         image.translatesAutoresizingMaskIntoConstraints = false
         
         return image
@@ -112,8 +113,8 @@ class StationsCollectionCell: UICollectionViewCell {
         boardingPassView.addSubview(boardingCheck)
         
             
-        stationDetailStack.addArrangedSubview(countryCode)
         stationDetailStack.addArrangedSubview(countryName)
+        stationDetailStack.addArrangedSubview(countryCode)
         stationDetailStack.addArrangedSubview(boardingPassView)
         
         backView.addSubview(stationDetailStack)
@@ -167,12 +168,11 @@ class StationsCollectionCell: UICollectionViewCell {
     func configureCell(station:Station){
         
         name.text = station.name
-        countryCode.text = "Country Code: \(station.countryCode ?? "")"
+        countryCode.text = "Code: \(station.code)"
         countryName.text = "Country Name: \(station.countryName ?? "")"
         boardingPass.text = "Mobile Boarding Pass: "
         if let urlString = station.tripCardImageURL {
             stationImage.kf.indicatorType = .activity
-            print(urlString)
             stationImage.kf.setImage(with: URL(string: urlString))
         }
 
