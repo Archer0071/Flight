@@ -32,6 +32,7 @@ class StationsController:UIViewController{
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout:StationsCollectionFlowLayout())
         collectionView.register(StationsCollectionCell.self, forCellWithReuseIdentifier: StationsCollectionCell.reuseIdentifier)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor  = .clear
         return collectionView
         
     }()
@@ -42,7 +43,8 @@ class StationsController:UIViewController{
     
     private func configureUI(){
         title = "STATIONS"
-        view.backgroundColor = UIColor(light: .white, dark: .black)   /// For Dark and Light Mode support
+        view.backgroundColor = UIColor(light: .systemGroupedBackground, dark: .black)   /// For Dark and Light Mode support
+        
         collectionView.frame = view.bounds
         view.addSubview(collectionView)                /// Adding CollectionVIew to ViewController View
         

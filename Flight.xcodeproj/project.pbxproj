@@ -24,6 +24,7 @@
 		CB92834E28ACD7980048439A /* StationsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834D28ACD7980048439A /* StationsCollectionCell.swift */; };
 		CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */; };
 		CBA20DCA28ACE30800374116 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */; };
+		CBA20DCD28ACE60F00374116 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CBA20DCC28ACE60F00374116 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA20DCD28ACE60F00374116 /* Kingfisher in Frameworks */,
 				CB92833C28ACC49D0048439A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +191,7 @@
 			name = Flight;
 			packageProductDependencies = (
 				CB92833B28ACC49D0048439A /* Alamofire */,
+				CBA20DCC28ACE60F00374116 /* Kingfisher */,
 			);
 			productName = Flight;
 			productReference = CB92831628ACC1A00048439A /* Flight.app */;
@@ -220,6 +223,7 @@
 			mainGroup = CB92830D28ACC1A00048439A;
 			packageReferences = (
 				CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CBA20DCB28ACE60F00374116 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = CB92831728ACC1A00048439A /* Products */;
 			projectDirPath = "";
@@ -480,6 +484,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		CBA20DCB28ACE60F00374116 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -487,6 +499,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		CBA20DCC28ACE60F00374116 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBA20DCB28ACE60F00374116 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

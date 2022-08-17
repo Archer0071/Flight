@@ -14,7 +14,7 @@ class StationsCollectionFlowLayout:UICollectionViewFlowLayout {
         super.init()
         self.scrollDirection = .vertical
         self.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-        self.itemSize = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/3)
+        self.itemSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/3)
         self.minimumInteritemSpacing = 0
         self.minimumLineSpacing = 0
     }
