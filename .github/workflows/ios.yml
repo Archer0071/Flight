@@ -1,0 +1,23 @@
+name: iOS workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    name: Build with No code signing
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build
+        env:
+          scheme: ${{ 'default' }}
+          platform: ${{ 'iOS Simulator' }}
+        run: |
+          xcodebuild -project Flight.xcodeproj -scheme Flight -configuration Debug -showdestinations
+          xcodebuild -project "Flight.xcodeproj" -scheme "Flight" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
