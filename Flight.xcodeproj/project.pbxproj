@@ -77,7 +77,7 @@
 				CB92833728ACC3560048439A /* Models */,
 				CB92833028ACC2790048439A /* Utils+Extensions */,
 				CB92832F28ACC26B0048439A /* Controllers */,
-				CB92834728ACCDA70048439A /* DependencyProvider */,
+				CB92834728ACCDA70048439A /* Providers */,
 				CB92832E28ACC21D0048439A /* Assets */,
 				CB92832D28ACC1D30048439A /* App */,
 				CB92832728ACC1A30048439A /* Info.plist */,
@@ -146,12 +146,12 @@
 			path = Networks;
 			sourceTree = "<group>";
 		};
-		CB92834728ACCDA70048439A /* DependencyProvider */ = {
+		CB92834728ACCDA70048439A /* Providers */ = {
 			isa = PBXGroup;
 			children = (
 				CB92834828ACCF080048439A /* DependencyProvider.swift */,
 			);
-			path = DependencyProvider;
+			path = Providers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
