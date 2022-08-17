@@ -26,6 +26,14 @@ class StationsController:UIViewController{
         let activityIndicator = UIActivityIndicatorView(frame: .zero)
         activityIndicator.style = UIActivityIndicatorView.Style.medium
         return activityIndicator
+        
+    }()
+    
+    private let searchController : UISearchController = {
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchBar.tintColor = UIColor(light: .black, dark: .white)
+        return searchController
+        
     }()
     
     private let collectionView: UICollectionView = {
@@ -34,6 +42,13 @@ class StationsController:UIViewController{
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor  = .clear
         return collectionView
+        
+    }()
+    
+    private let refreshControl: UIRefreshControl = {
+        let refresh = UIRefreshControl(frame: .zero)
+        refresh.attributedTitle = NSAttributedString(string: "Refreshing", attributes: nil)
+        return refresh
         
     }()
     
@@ -52,6 +67,12 @@ class StationsController:UIViewController{
         indicator.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: 20)
         collectionView.addSubview(indicator)         /// Adding ActivityIndicatior Loading  to CollectionView
         
+        if #available(iOS 10.0, *) {                         /// Checking IOS Version is Greater than 10
+            collectionView.refreshControl = refreshControl   /// Adding Pull Down Refresh  to CollectionView
+        } else {
+            collectionView.addSubview(refreshControl)
+        }
+        
         
     }
     
@@ -60,6 +81,8 @@ class StationsController:UIViewController{
         
         setupCollectionView()
         setupActivityIndicator()
+        setupSearchController()
+        setupRefreshController()
         setupBindings()
     }
     
@@ -72,11 +95,29 @@ class StationsController:UIViewController{
         indicator.startAnimating()
     }
     
+    private func setupSearchController(){   /// Adding SearchController to Navigation Bar and setting delegate
+        navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+    }
+    private func setupRefreshController(){ /// Adding  Listener  For  RefreshController on pulling CollectionvIew
+        refreshControl.addTarget(self, action: #selector(self.refreshData), for: UIControl.Event.valueChanged)
+        
+    }
+    @objc private func refreshData(){     /// Refreshing CollectionVIew Datasource with delay and making sure searchbar becomes empty
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
+            self.viewModel.getList()
+            self.searchController.searchBar.text = ""
+            self.searchController.dismiss(animated: true)
+            self.refreshControl.endRefreshing()
+        }
+        
+    }
+    
     private func setupBindings() {      /// ViewBindings Reactive
         viewModel.$stations
             .receive(on:DispatchQueue.main)
             .sink {[weak self] station in
-                if  self?.viewModel.stations?.stations.count ?? 0 > 0 {
+                if  self?.viewModel.stations.count ?? 0 > 0 {
                     self?.indicator.stopAnimating()
                     self?.indicator.hidesWhenStopped = true
                     
@@ -104,5 +145,7 @@ class StationsController:UIViewController{
                 }
                 
             }.store(in: &cancellables)
+        
+    
     }
 }
