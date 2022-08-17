@@ -25,13 +25,82 @@ class StationsController:UIViewController{
     private let indicator : UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(frame: .zero)
         activityIndicator.style = UIActivityIndicatorView.Style.medium
-        activityIndicator.backgroundColor = .clear
         return activityIndicator
     }()
     
+    private let collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout:StationsCollectionFlowLayout())
+        collectionView.register(StationsCollectionCell.self, forCellWithReuseIdentifier: StationsCollectionCell.reuseIdentifier)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+        
+    }()
+    
+    override func viewDidLayoutSubviews() {
+        configureUI()
+    }
+    
+    private func configureUI(){
+        title = "STATIONS"
+        view.backgroundColor = UIColor(light: .white, dark: .black)   /// For Dark and Light Mode support
+        collectionView.frame = view.bounds
+        view.addSubview(collectionView)                /// Adding CollectionVIew to ViewController View
+        
+        indicator.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        indicator.center = CGPoint(x: UIScreen.main.bounds.size.width/2, y: 20)
+        collectionView.addSubview(indicator)         /// Adding ActivityIndicatior Loading  to CollectionView
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "STATIONS"
-        view.backgroundColor = UIColor(light: .white, dark: .black)
+        
+        setupCollectionView()
+        setupActivityIndicator()
+        setupBindings()
+    }
+    
+    private func setupCollectionView(){     /// Setting CollectionVIew Delegates/DataSource
+        collectionView.dataSource = self
+        collectionView.delegate = self
+    }
+    
+    private func setupActivityIndicator() { /// Animating ActivityIndication at creation
+        indicator.startAnimating()
+    }
+    
+    private func setupBindings() {      /// ViewBindings Reactive
+        viewModel.$stations
+            .receive(on:DispatchQueue.main)
+            .sink {[weak self] station in
+                if  self?.viewModel.stations?.stations.count ?? 0 > 0 {
+                    self?.indicator.stopAnimating()
+                    self?.indicator.hidesWhenStopped = true
+                    
+                }
+                
+                UIView.transition(
+                    with: (self?.collectionView)!,
+                    duration: 0.2,
+                    options: .transitionCrossDissolve,
+                    animations: { self?.collectionView.reloadData() },
+                    completion: nil
+                )
+                
+            }
+            .store(in: &cancellables)
+        
+        viewModel.$showAlert        /// Showing Alert  on Error Fetching Networks
+            .receive(on: DispatchQueue.main)
+            .sink{[weak self] showAlert in
+                if showAlert {
+                    let alert = UIAlertController(title: "Error", message: self?.viewModel.listLoadingError, preferredStyle:.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self?.present(alert, animated: true, completion: nil)
+                    self?.indicator.stopAnimating()
+                }
+                
+            }.store(in: &cancellables)
     }
 }
