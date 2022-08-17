@@ -11,7 +11,7 @@ import UIKit
 
 class StationsViewModel: ObservableObject {
     
-    @Published  var stations: Stations?
+    @Published  var stations: Stations!
     @Published  var listLoadingError: String = ""
     @Published  var showAlert: Bool = false
     private var cancellables: Set<AnyCancellable> = []
@@ -42,5 +42,14 @@ class StationsViewModel: ObservableObject {
         self.showAlert = true
         
     }
+    
+    func numberOfPosts() -> Int {
+        
+       return stations.stations.count
+     }
+     
+    func postAt(indexPath: IndexPath) -> Station {
+        return stations.stations[indexPath.row]
+     }
 }
 
