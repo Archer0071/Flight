@@ -23,6 +23,7 @@
 		CB92834C28ACD74E0048439A /* StationsCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */; };
 		CB92834E28ACD7980048439A /* StationsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834D28ACD7980048439A /* StationsCollectionCell.swift */; };
 		CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */; };
+		CBA20DCA28ACE30800374116 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCollectionFlowLayout.swift; sourceTree = "<group>"; };
 		CB92834D28ACD7980048439A /* StationsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCollectionCell.swift; sourceTree = "<group>"; };
 		CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StationsController+Extensions.swift"; sourceTree = "<group>"; };
+		CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			children = (
 				CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */,
 				CB92834D28ACD7980048439A /* StationsCollectionCell.swift */,
+				CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			files = (
 				CB92833628ACC3060048439A /* StationsController.swift in Sources */,
 				CB92834028ACC7940048439A /* Service.swift in Sources */,
+				CBA20DCA28ACE30800374116 /* UIImageView+Extension.swift in Sources */,
 				CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */,
 				CB92834628ACC99E0048439A /* StationsViewModel.swift in Sources */,
 				CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */,
