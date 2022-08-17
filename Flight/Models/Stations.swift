@@ -14,7 +14,7 @@ struct Stations: Codable {
 
 // MARK: - Station
 struct Station: Codable {
-    let code, name: String?
+    let code, name: String
     let alternateName: String?
     let alias: [String]?
     let countryCode, countryName: String?
