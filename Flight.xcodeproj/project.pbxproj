@@ -9,21 +9,24 @@
 /* Begin PBXBuildFile section */
 		CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831928ACC1A00048439A /* AppDelegate.swift */; };
 		CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831B28ACC1A00048439A /* SceneDelegate.swift */; };
-		CB92831E28ACC1A00048439A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831D28ACC1A00048439A /* ViewController.swift */; };
-		CB92832128ACC1A00048439A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92831F28ACC1A00048439A /* Main.storyboard */; };
 		CB92832328ACC1A30048439A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB92832228ACC1A30048439A /* Assets.xcassets */; };
 		CB92832628ACC1A30048439A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92832428ACC1A30048439A /* LaunchScreen.storyboard */; };
+		CB92833228ACC2A50048439A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833128ACC2A50048439A /* UIColor+Extensions.swift */; };
+		CB92833428ACC2E30048439A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833328ACC2E30048439A /* NavigationController.swift */; };
+		CB92833628ACC3060048439A /* StationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833528ACC3060048439A /* StationsController.swift */; };
+		CB92833C28ACC49D0048439A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB92833B28ACC49D0048439A /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CB92831628ACC1A00048439A /* Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92831928ACC1A00048439A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB92831B28ACC1A00048439A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB92831D28ACC1A00048439A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB92832028ACC1A00048439A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB92832228ACC1A30048439A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB92832528ACC1A30048439A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB92832728ACC1A30048439A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB92833128ACC2A50048439A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		CB92833328ACC2E30048439A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		CB92833528ACC3060048439A /* StationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB92833C28ACC49D0048439A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,72 @@
 		CB92831828ACC1A00048439A /* Flight */ = {
 			isa = PBXGroup;
 			children = (
-				CB92831928ACC1A00048439A /* AppDelegate.swift */,
-				CB92831B28ACC1A00048439A /* SceneDelegate.swift */,
-				CB92831D28ACC1A00048439A /* ViewController.swift */,
-				CB92831F28ACC1A00048439A /* Main.storyboard */,
-				CB92832228ACC1A30048439A /* Assets.xcassets */,
-				CB92832428ACC1A30048439A /* LaunchScreen.storyboard */,
+				CB92833928ACC3670048439A /* Networks */,
+				CB92833828ACC35D0048439A /* ViewModels */,
+				CB92833728ACC3560048439A /* Models */,
+				CB92833028ACC2790048439A /* Utils+Extensions */,
+				CB92832F28ACC26B0048439A /* Controllers */,
+				CB92832E28ACC21D0048439A /* Assets */,
+				CB92832D28ACC1D30048439A /* App */,
 				CB92832728ACC1A30048439A /* Info.plist */,
 			);
 			path = Flight;
+			sourceTree = "<group>";
+		};
+		CB92832D28ACC1D30048439A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CB92831928ACC1A00048439A /* AppDelegate.swift */,
+				CB92831B28ACC1A00048439A /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CB92832E28ACC21D0048439A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				CB92832228ACC1A30048439A /* Assets.xcassets */,
+				CB92832428ACC1A30048439A /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		CB92832F28ACC26B0048439A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CB92833328ACC2E30048439A /* NavigationController.swift */,
+				CB92833528ACC3060048439A /* StationsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CB92833028ACC2790048439A /* Utils+Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB92833128ACC2A50048439A /* UIColor+Extensions.swift */,
+			);
+			path = "Utils+Extensions";
+			sourceTree = "<group>";
+		};
+		CB92833728ACC3560048439A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB92833828ACC35D0048439A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CB92833928ACC3670048439A /* Networks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +144,9 @@
 			dependencies = (
 			);
 			name = Flight;
+			packageProductDependencies = (
+				CB92833B28ACC49D0048439A /* Alamofire */,
+			);
 			productName = Flight;
 			productReference = CB92831628ACC1A00048439A /* Flight.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +175,9 @@
 				Base,
 			);
 			mainGroup = CB92830D28ACC1A00048439A;
+			packageReferences = (
+				CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CB92831728ACC1A00048439A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +194,6 @@
 			files = (
 				CB92832628ACC1A30048439A /* LaunchScreen.storyboard in Resources */,
 				CB92832328ACC1A30048439A /* Assets.xcassets in Resources */,
-				CB92832128ACC1A00048439A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +204,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB92831E28ACC1A00048439A /* ViewController.swift in Sources */,
+				CB92833628ACC3060048439A /* StationsController.swift in Sources */,
 				CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */,
+				CB92833428ACC2E30048439A /* NavigationController.swift in Sources */,
+				CB92833228ACC2A50048439A /* UIColor+Extensions.swift in Sources */,
 				CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +215,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CB92831F28ACC1A00048439A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB92832028ACC1A00048439A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB92832428ACC1A30048439A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +352,7 @@
 				INFOPLIST_FILE = Flight/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +364,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +380,7 @@
 				INFOPLIST_FILE = Flight/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +392,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +418,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB92833B28ACC49D0048439A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB92830E28ACC1A00048439A /* Project object */;
 }
