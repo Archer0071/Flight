@@ -41,7 +41,7 @@ class StationsCollectionCell: UICollectionViewCell {
     
     private let backView : UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(light: .white, dark: .lightText)
+        view.backgroundColor = UIColor(light: .white, dark: .opaqueSeparator)
         view.layer.cornerRadius = 10
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -170,16 +170,10 @@ class StationsCollectionCell: UICollectionViewCell {
         countryCode.text = "Country Code: \(station.countryCode ?? "")"
         countryName.text = "Country Name: \(station.countryName ?? "")"
         boardingPass.text = "Mobile Boarding Pass: "
-        if let url = station.tripCardImageURL {
-            self.stationImage.kf.indicatorType = .activity
-            self.stationImage.kf.setImage(
-                with: URL(string:url),
-                placeholder: UIImage(named: "stationsBackground"),
-                options: [
-                    .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(1)),
-                    .cacheOriginalImage
-                ])
+        if let urlString = station.tripCardImageURL {
+            stationImage.kf.indicatorType = .activity
+            print(urlString)
+            stationImage.kf.setImage(with: URL(string: urlString))
         }
 
     }
