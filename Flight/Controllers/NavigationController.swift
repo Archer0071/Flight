@@ -13,8 +13,8 @@ class NavigationController: UINavigationController {
     
     // The root view controller for our app
     init() {
-        
-        super.init(rootViewController: StationsController())
+       
+        super.init(rootViewController: DependencyProvider.stationsController)
     }
     
     // Helper init
