@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB438A9B28AE332F00D97AB6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438A9A28AE332F00D97AB6 /* Date+Extension.swift */; };
+		CB438AB028AE45D600D97AB6 /* UIImage+BundleInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AA128AE45D500D97AB6 /* UIImage+BundleInit.swift */; };
+		CB438AB128AE45D600D97AB6 /* Date+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AA228AE45D500D97AB6 /* Date+Utilities.swift */; };
+		CB438AB228AE45D600D97AB6 /* String+CapitalizeFirstLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AA328AE45D500D97AB6 /* String+CapitalizeFirstLetter.swift */; };
+		CB438AB328AE45D600D97AB6 /* Shortcut.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AA528AE45D500D97AB6 /* Shortcut.swift */; };
+		CB438AB428AE45D600D97AB6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AA628AE45D500D97AB6 /* Config.swift */; };
+		CB438AB528AE45D600D97AB6 /* Value.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AA728AE45D500D97AB6 /* Value.swift */; };
+		CB438AB628AE45D600D97AB6 /* ShortcutContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AA928AE45D600D97AB6 /* ShortcutContainerView.swift */; };
+		CB438AB728AE45D600D97AB6 /* MonthHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AAA28AE45D600D97AB6 /* MonthHeader.swift */; };
+		CB438AB828AE45D600D97AB6 /* CurrentValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AAB28AE45D600D97AB6 /* CurrentValueView.swift */; };
+		CB438AB928AE45D600D97AB6 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AAC28AE45D600D97AB6 /* Controller.swift */; };
+		CB438ABA28AE45D600D97AB6 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AAD28AE45D600D97AB6 /* DayCell.swift */; };
+		CB438ABB28AE45D600D97AB6 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AAE28AE45D600D97AB6 /* WeekView.swift */; };
+		CB438ABC28AE45D600D97AB6 /* ShortcutItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AAF28AE45D600D97AB6 /* ShortcutItemView.swift */; };
+		CB438ABF28AE461500D97AB6 /* JTAppleCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CB438ABE28AE461500D97AB6 /* JTAppleCalendar */; };
+		CB438AC228AE463000D97AB6 /* PrettyCards in Frameworks */ = {isa = PBXBuildFile; productRef = CB438AC128AE463000D97AB6 /* PrettyCards */; };
+		CB438AC528AE464600D97AB6 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = CB438AC428AE464600D97AB6 /* SnapKit */; };
 		CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831928ACC1A00048439A /* AppDelegate.swift */; };
 		CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831B28ACC1A00048439A /* SceneDelegate.swift */; };
 		CB92832328ACC1A30048439A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB92832228ACC1A30048439A /* Assets.xcassets */; };
@@ -28,6 +45,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB438A9A28AE332F00D97AB6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CB438AA128AE45D500D97AB6 /* UIImage+BundleInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+BundleInit.swift"; sourceTree = "<group>"; };
+		CB438AA228AE45D500D97AB6 /* Date+Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Utilities.swift"; sourceTree = "<group>"; };
+		CB438AA328AE45D500D97AB6 /* String+CapitalizeFirstLetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+CapitalizeFirstLetter.swift"; sourceTree = "<group>"; };
+		CB438AA528AE45D500D97AB6 /* Shortcut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shortcut.swift; sourceTree = "<group>"; };
+		CB438AA628AE45D500D97AB6 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CB438AA728AE45D500D97AB6 /* Value.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Value.swift; sourceTree = "<group>"; };
+		CB438AA928AE45D600D97AB6 /* ShortcutContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutContainerView.swift; sourceTree = "<group>"; };
+		CB438AAA28AE45D600D97AB6 /* MonthHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeader.swift; sourceTree = "<group>"; };
+		CB438AAB28AE45D600D97AB6 /* CurrentValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentValueView.swift; sourceTree = "<group>"; };
+		CB438AAC28AE45D600D97AB6 /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		CB438AAD28AE45D600D97AB6 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		CB438AAE28AE45D600D97AB6 /* WeekView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		CB438AAF28AE45D600D97AB6 /* ShortcutItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShortcutItemView.swift; sourceTree = "<group>"; };
 		CB92831628ACC1A00048439A /* Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92831928ACC1A00048439A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB92831B28ACC1A00048439A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,14 +84,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB438AC228AE463000D97AB6 /* PrettyCards in Frameworks */,
 				CBA20DCD28ACE60F00374116 /* Kingfisher in Frameworks */,
+				CB438ABF28AE461500D97AB6 /* JTAppleCalendar in Frameworks */,
 				CB92833C28ACC49D0048439A /* Alamofire in Frameworks */,
+				CB438AC528AE464600D97AB6 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB438A9F28AE45CA00D97AB6 /* Fastis */ = {
+			isa = PBXGroup;
+			children = (
+				CB438AA028AE45D500D97AB6 /* Extensions */,
+				CB438AA428AE45D500D97AB6 /* Models */,
+				CB438AA828AE45D600D97AB6 /* Views */,
+			);
+			path = Fastis;
+			sourceTree = "<group>";
+		};
+		CB438AA028AE45D500D97AB6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB438AA128AE45D500D97AB6 /* UIImage+BundleInit.swift */,
+				CB438AA228AE45D500D97AB6 /* Date+Utilities.swift */,
+				CB438AA328AE45D500D97AB6 /* String+CapitalizeFirstLetter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CB438AA428AE45D500D97AB6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CB438AA528AE45D500D97AB6 /* Shortcut.swift */,
+				CB438AA628AE45D500D97AB6 /* Config.swift */,
+				CB438AA728AE45D500D97AB6 /* Value.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CB438AA828AE45D600D97AB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB438AA928AE45D600D97AB6 /* ShortcutContainerView.swift */,
+				CB438AAA28AE45D600D97AB6 /* MonthHeader.swift */,
+				CB438AAB28AE45D600D97AB6 /* CurrentValueView.swift */,
+				CB438AAC28AE45D600D97AB6 /* Controller.swift */,
+				CB438AAD28AE45D600D97AB6 /* DayCell.swift */,
+				CB438AAE28AE45D600D97AB6 /* WeekView.swift */,
+				CB438AAF28AE45D600D97AB6 /* ShortcutItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CB92830D28ACC1A00048439A = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +166,7 @@
 				CB92832F28ACC26B0048439A /* Controllers */,
 				CB92832E28ACC21D0048439A /* Assets */,
 				CB92832D28ACC1D30048439A /* App */,
+				CB438A9F28AE45CA00D97AB6 /* Fastis */,
 				CB92832728ACC1A30048439A /* Info.plist */,
 			);
 			path = Flight;
@@ -126,6 +205,7 @@
 				CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */,
 				CB92833128ACC2A50048439A /* UIColor+Extensions.swift */,
 				CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */,
+				CB438A9A28AE332F00D97AB6 /* Date+Extension.swift */,
 			);
 			path = "Utils+Extensions";
 			sourceTree = "<group>";
@@ -184,6 +264,9 @@
 			packageProductDependencies = (
 				CB92833B28ACC49D0048439A /* Alamofire */,
 				CBA20DCC28ACE60F00374116 /* Kingfisher */,
+				CB438ABE28AE461500D97AB6 /* JTAppleCalendar */,
+				CB438AC128AE463000D97AB6 /* PrettyCards */,
+				CB438AC428AE464600D97AB6 /* SnapKit */,
 			);
 			productName = Flight;
 			productReference = CB92831628ACC1A00048439A /* Flight.app */;
@@ -216,6 +299,9 @@
 			packageReferences = (
 				CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CBA20DCB28ACE60F00374116 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CB438ABD28AE461500D97AB6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */,
+				CB438AC028AE463000D97AB6 /* XCRemoteSwiftPackageReference "PrettyCards" */,
+				CB438AC328AE464600D97AB6 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = CB92831728ACC1A00048439A /* Products */;
 			projectDirPath = "";
@@ -243,20 +329,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB438AB328AE45D600D97AB6 /* Shortcut.swift in Sources */,
 				CB92833628ACC3060048439A /* StationsController.swift in Sources */,
+				CB438AB528AE45D600D97AB6 /* Value.swift in Sources */,
 				CB92834028ACC7940048439A /* Service.swift in Sources */,
+				CB438ABA28AE45D600D97AB6 /* DayCell.swift in Sources */,
+				CB438AB728AE45D600D97AB6 /* MonthHeader.swift in Sources */,
+				CB438AB928AE45D600D97AB6 /* Controller.swift in Sources */,
 				CBA20DCA28ACE30800374116 /* UIImageView+Extension.swift in Sources */,
 				CBA6FA6C28AD3A3E00032AE7 /* FindFlightsController.swift in Sources */,
 				CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */,
 				CB92834628ACC99E0048439A /* StationsViewModel.swift in Sources */,
+				CB438ABC28AE45D600D97AB6 /* ShortcutItemView.swift in Sources */,
 				CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */,
 				CB92834E28ACD7980048439A /* StationsCollectionCell.swift in Sources */,
 				CB92833E28ACC7600048439A /* NetworkError.swift in Sources */,
+				CB438AB828AE45D600D97AB6 /* CurrentValueView.swift in Sources */,
+				CB438ABB28AE45D600D97AB6 /* WeekView.swift in Sources */,
 				CB92834C28ACD74E0048439A /* StationsCollectionFlowLayout.swift in Sources */,
 				CB92833228ACC2A50048439A /* UIColor+Extensions.swift in Sources */,
+				CB438AB128AE45D600D97AB6 /* Date+Utilities.swift in Sources */,
+				CB438A9B28AE332F00D97AB6 /* Date+Extension.swift in Sources */,
 				CB92834428ACC9100048439A /* ServiceProtocol.swift in Sources */,
+				CB438AB028AE45D600D97AB6 /* UIImage+BundleInit.swift in Sources */,
 				CB92834228ACC8340048439A /* Stations.swift in Sources */,
+				CB438AB428AE45D600D97AB6 /* Config.swift in Sources */,
 				CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */,
+				CB438AB628AE45D600D97AB6 /* ShortcutContainerView.swift in Sources */,
+				CB438AB228AE45D600D97AB6 /* String+CapitalizeFirstLetter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +568,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB438ABD28AE461500D97AB6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/patchthecode/JTAppleCalendar";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CB438AC028AE463000D97AB6 /* XCRemoteSwiftPackageReference "PrettyCards" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simla-tech/PrettyCards";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		CB438AC328AE464600D97AB6 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 		CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -487,6 +611,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB438ABE28AE461500D97AB6 /* JTAppleCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB438ABD28AE461500D97AB6 /* XCRemoteSwiftPackageReference "JTAppleCalendar" */;
+			productName = JTAppleCalendar;
+		};
+		CB438AC128AE463000D97AB6 /* PrettyCards */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB438AC028AE463000D97AB6 /* XCRemoteSwiftPackageReference "PrettyCards" */;
+			productName = PrettyCards;
+		};
+		CB438AC428AE464600D97AB6 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB438AC328AE464600D97AB6 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
 		CB92833B28ACC49D0048439A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */;

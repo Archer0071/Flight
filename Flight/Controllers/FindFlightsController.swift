@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 import Combine
-import SwiftUI
+
+
+
 class FindFlightsController:UIViewController{
     private var cancellables: Set<AnyCancellable> = []
     
@@ -124,7 +126,6 @@ class FindFlightsController:UIViewController{
         let label = UILabel(frame: .zero)
         label.text = "Select Date"
         label.textColor = UIColor(light: .black, dark: .white)
-        label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 14)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -171,6 +172,8 @@ class FindFlightsController:UIViewController{
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+
+    
     override func viewDidLayoutSubviews() {
         configureUI()
     }
@@ -248,15 +251,15 @@ class FindFlightsController:UIViewController{
         super.viewDidLoad()
         fromButton.addTarget(target, action: #selector(selectFrom), for: .touchUpInside)
         toButton.addTarget(target, action: #selector(selectTo), for: .touchUpInside)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.calenderPopView(_:)))
+        tripType.addTarget(self, action: #selector(self.tripSelectionChanged(sender:)), for: UIControl.Event.valueChanged)
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.calenderPopView(sender:)))
         flyHStack.addGestureRecognizer(tap)
+        
 
         
         
     }
-    @objc func calenderPopView(_ sender: UITapGestureRecognizer) {
-       
-    }
+   
 
     @objc func selectFrom(){
         let service = Service()
@@ -267,6 +270,7 @@ class FindFlightsController:UIViewController{
         }.store(in: &cancellables)
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     @objc func selectTo(){
         let service = Service()
         let viewModel = StationsViewModel(dataService: service)
@@ -277,5 +281,52 @@ class FindFlightsController:UIViewController{
         navigationController?.pushViewController(vc, animated: true)
 
     }
-
+    
+    @objc func tripSelectionChanged(sender:UISegmentedControl){
+        switch tripType.selectedSegmentIndex {
+        case 0:
+            flyBackVstack.isHidden = false
+            
+        case 1:
+            flyBackVstack.isHidden = true
+        default:
+            break
+        }
+    }
+    
+    @objc func calenderPopView(sender: UITapGestureRecognizer) {
+        switch tripType.selectedSegmentIndex {
+        case 0 :
+        let dateController = FastisController(mode: .range)
+        dateController.title = "Select Your Dates"
+        dateController.minimumDate = Date()
+        dateController.allowToChooseNilDate = true
+        dateController.doneHandler = { result in
+               if let result = result {
+                   self.flyOutDate.text =  result.fromDate.convertToString()
+                   self.flyBackDate.text = result.toDate.convertToString()
+               }
+           }
+        dateController.present(above: self)
+            
+        case 1:
+            let dateController = FastisController(mode: .single)
+            dateController.title = "Select Your Date"
+            dateController.minimumDate = Date()
+            dateController.allowToChooseNilDate = true
+            dateController.doneHandler = { result in
+                   if let result = result {
+                       self.flyOutDate.text =  result.convertToString()
+                       self.flyBackDate.text = "Select Date"
+                   }
+               }
+            dateController.present(above: self)
+            
+        default:
+            break
+        }
+    
+    }
+    
+    
 }
