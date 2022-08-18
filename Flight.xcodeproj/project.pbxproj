@@ -7,17 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB438A9B28AE332F00D97AB6 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438A9A28AE332F00D97AB6 /* Date+Extension.swift */; };
+		CB438AC728AE54F400D97AB6 /* PassengerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AC628AE54F400D97AB6 /* PassengerController.swift */; };
+		CB438AC928AE58AE00D97AB6 /* PassengerTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB438AC828AE58AD00D97AB6 /* PassengerTableCell.swift */; };
+		CB9255E028AE78DF0065F65D /* Passenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255DF28AE78DF0065F65D /* Passenger.swift */; };
+		CB9255E228AE79610065F65D /* PassengerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255E128AE79610065F65D /* PassengerViewModel.swift */; };
+		CB9255E428AE84E40065F65D /* FindFlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255E328AE84E40065F65D /* FindFlightsViewModel.swift */; };
+		CB9255E628AEC32D0065F65D /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255E528AEC32D0065F65D /* CalendarController.swift */; };
+		CB9255E928AEC5CA0065F65D /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = CB9255E828AEC5CA0065F65D /* FSCalendar */; };
+		CB9255EB28AECD980065F65D /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255EA28AECD980065F65D /* CalendarViewModel.swift */; };
+		CB9255ED28AEE7E60065F65D /* CalenderController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255EC28AEE7E60065F65D /* CalenderController+Extension.swift */; };
+		CB9255EF28AEE81E0065F65D /* PassengerController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255EE28AEE81E0065F65D /* PassengerController+Extension.swift */; };
 		CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831928ACC1A00048439A /* AppDelegate.swift */; };
 		CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831B28ACC1A00048439A /* SceneDelegate.swift */; };
 		CB92832328ACC1A30048439A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB92832228ACC1A30048439A /* Assets.xcassets */; };
 		CB92832628ACC1A30048439A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB92832428ACC1A30048439A /* LaunchScreen.storyboard */; };
 		CB92833228ACC2A50048439A /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833128ACC2A50048439A /* UIColor+Extensions.swift */; };
-		CB92833428ACC2E30048439A /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833328ACC2E30048439A /* NavigationController.swift */; };
 		CB92833628ACC3060048439A /* StationsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833528ACC3060048439A /* StationsController.swift */; };
 		CB92833C28ACC49D0048439A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CB92833B28ACC49D0048439A /* Alamofire */; };
+		CB92833E28ACC7600048439A /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833D28ACC7600048439A /* NetworkError.swift */; };
+		CB92834028ACC7940048439A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92833F28ACC7940048439A /* Service.swift */; };
+		CB92834228ACC8340048439A /* Stations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834128ACC8340048439A /* Stations.swift */; };
+		CB92834428ACC9100048439A /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834328ACC9100048439A /* ServiceProtocol.swift */; };
+		CB92834628ACC99E0048439A /* StationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834528ACC99E0048439A /* StationsViewModel.swift */; };
+		CB92834C28ACD74E0048439A /* StationsCollectionFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */; };
+		CB92834E28ACD7980048439A /* StationsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834D28ACD7980048439A /* StationsCollectionCell.swift */; };
+		CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */; };
+		CBA20DCA28ACE30800374116 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */; };
+		CBA20DCD28ACE60F00374116 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CBA20DCC28ACE60F00374116 /* Kingfisher */; };
+		CBA6FA6C28AD3A3E00032AE7 /* FindFlightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6FA6B28AD3A3E00032AE7 /* FindFlightsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CB438A9A28AE332F00D97AB6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		CB438AC628AE54F400D97AB6 /* PassengerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerController.swift; sourceTree = "<group>"; };
+		CB438AC828AE58AD00D97AB6 /* PassengerTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerTableCell.swift; sourceTree = "<group>"; };
+		CB9255DF28AE78DF0065F65D /* Passenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Passenger.swift; sourceTree = "<group>"; };
+		CB9255E128AE79610065F65D /* PassengerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerViewModel.swift; sourceTree = "<group>"; };
+		CB9255E328AE84E40065F65D /* FindFlightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFlightsViewModel.swift; sourceTree = "<group>"; };
+		CB9255E528AEC32D0065F65D /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		CB9255EA28AECD980065F65D /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		CB9255EC28AEE7E60065F65D /* CalenderController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalenderController+Extension.swift"; sourceTree = "<group>"; };
+		CB9255EE28AEE81E0065F65D /* PassengerController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassengerController+Extension.swift"; sourceTree = "<group>"; };
 		CB92831628ACC1A00048439A /* Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92831928ACC1A00048439A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB92831B28ACC1A00048439A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,8 +56,17 @@
 		CB92832528ACC1A30048439A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB92832728ACC1A30048439A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB92833128ACC2A50048439A /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		CB92833328ACC2E30048439A /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		CB92833528ACC3060048439A /* StationsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsController.swift; sourceTree = "<group>"; };
+		CB92833D28ACC7600048439A /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CB92833F28ACC7940048439A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		CB92834128ACC8340048439A /* Stations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stations.swift; sourceTree = "<group>"; };
+		CB92834328ACC9100048439A /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		CB92834528ACC99E0048439A /* StationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel.swift; sourceTree = "<group>"; };
+		CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCollectionFlowLayout.swift; sourceTree = "<group>"; };
+		CB92834D28ACD7980048439A /* StationsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsCollectionCell.swift; sourceTree = "<group>"; };
+		CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StationsController+Extensions.swift"; sourceTree = "<group>"; };
+		CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		CBA6FA6B28AD3A3E00032AE7 /* FindFlightsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFlightsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBA20DCD28ACE60F00374116 /* Kingfisher in Frameworks */,
+				CB9255E928AEC5CA0065F65D /* FSCalendar in Frameworks */,
 				CB92833C28ACC49D0048439A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -60,6 +102,7 @@
 		CB92831828ACC1A00048439A /* Flight */ = {
 			isa = PBXGroup;
 			children = (
+				CB92834A28ACD72E0048439A /* Views */,
 				CB92833928ACC3670048439A /* Networks */,
 				CB92833828ACC35D0048439A /* ViewModels */,
 				CB92833728ACC3560048439A /* Models */,
@@ -93,8 +136,10 @@
 		CB92832F28ACC26B0048439A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CB92833328ACC2E30048439A /* NavigationController.swift */,
 				CB92833528ACC3060048439A /* StationsController.swift */,
+				CBA6FA6B28AD3A3E00032AE7 /* FindFlightsController.swift */,
+				CB438AC628AE54F400D97AB6 /* PassengerController.swift */,
+				CB9255E528AEC32D0065F65D /* CalendarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -102,7 +147,12 @@
 		CB92833028ACC2790048439A /* Utils+Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CB92834F28ACD98C0048439A /* StationsController+Extensions.swift */,
 				CB92833128ACC2A50048439A /* UIColor+Extensions.swift */,
+				CBA20DC928ACE30800374116 /* UIImageView+Extension.swift */,
+				CB438A9A28AE332F00D97AB6 /* Date+Extension.swift */,
+				CB9255EC28AEE7E60065F65D /* CalenderController+Extension.swift */,
+				CB9255EE28AEE81E0065F65D /* PassengerController+Extension.swift */,
 			);
 			path = "Utils+Extensions";
 			sourceTree = "<group>";
@@ -110,6 +160,8 @@
 		CB92833728ACC3560048439A /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CB92834128ACC8340048439A /* Stations.swift */,
+				CB9255DF28AE78DF0065F65D /* Passenger.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -117,6 +169,10 @@
 		CB92833828ACC35D0048439A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CB92834528ACC99E0048439A /* StationsViewModel.swift */,
+				CB9255E128AE79610065F65D /* PassengerViewModel.swift */,
+				CB9255E328AE84E40065F65D /* FindFlightsViewModel.swift */,
+				CB9255EA28AECD980065F65D /* CalendarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,8 +180,21 @@
 		CB92833928ACC3670048439A /* Networks */ = {
 			isa = PBXGroup;
 			children = (
+				CB92833D28ACC7600048439A /* NetworkError.swift */,
+				CB92833F28ACC7940048439A /* Service.swift */,
+				CB92834328ACC9100048439A /* ServiceProtocol.swift */,
 			);
 			path = Networks;
+			sourceTree = "<group>";
+		};
+		CB92834A28ACD72E0048439A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CB92834B28ACD74E0048439A /* StationsCollectionFlowLayout.swift */,
+				CB92834D28ACD7980048439A /* StationsCollectionCell.swift */,
+				CB438AC828AE58AD00D97AB6 /* PassengerTableCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +215,8 @@
 			name = Flight;
 			packageProductDependencies = (
 				CB92833B28ACC49D0048439A /* Alamofire */,
+				CBA20DCC28ACE60F00374116 /* Kingfisher */,
+				CB9255E828AEC5CA0065F65D /* FSCalendar */,
 			);
 			productName = Flight;
 			productReference = CB92831628ACC1A00048439A /* Flight.app */;
@@ -177,6 +248,8 @@
 			mainGroup = CB92830D28ACC1A00048439A;
 			packageReferences = (
 				CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CBA20DCB28ACE60F00374116 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				CB9255E728AEC5CA0065F65D /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = CB92831728ACC1A00048439A /* Products */;
 			projectDirPath = "";
@@ -205,9 +278,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB92833628ACC3060048439A /* StationsController.swift in Sources */,
+				CB92834028ACC7940048439A /* Service.swift in Sources */,
+				CB9255ED28AEE7E60065F65D /* CalenderController+Extension.swift in Sources */,
+				CB438AC728AE54F400D97AB6 /* PassengerController.swift in Sources */,
+				CB9255E228AE79610065F65D /* PassengerViewModel.swift in Sources */,
+				CBA20DCA28ACE30800374116 /* UIImageView+Extension.swift in Sources */,
+				CBA6FA6C28AD3A3E00032AE7 /* FindFlightsController.swift in Sources */,
 				CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */,
-				CB92833428ACC2E30048439A /* NavigationController.swift in Sources */,
+				CB92834628ACC99E0048439A /* StationsViewModel.swift in Sources */,
+				CB92835028ACD98C0048439A /* StationsController+Extensions.swift in Sources */,
+				CB92834E28ACD7980048439A /* StationsCollectionCell.swift in Sources */,
+				CB9255E628AEC32D0065F65D /* CalendarController.swift in Sources */,
+				CB92833E28ACC7600048439A /* NetworkError.swift in Sources */,
+				CB438AC928AE58AE00D97AB6 /* PassengerTableCell.swift in Sources */,
+				CB92834C28ACD74E0048439A /* StationsCollectionFlowLayout.swift in Sources */,
 				CB92833228ACC2A50048439A /* UIColor+Extensions.swift in Sources */,
+				CB438A9B28AE332F00D97AB6 /* Date+Extension.swift in Sources */,
+				CB9255E428AE84E40065F65D /* FindFlightsViewModel.swift in Sources */,
+				CB9255EF28AEE81E0065F65D /* PassengerController+Extension.swift in Sources */,
+				CB9255E028AE78DF0065F65D /* Passenger.swift in Sources */,
+				CB92834428ACC9100048439A /* ServiceProtocol.swift in Sources */,
+				CB92834228ACC8340048439A /* Stations.swift in Sources */,
+				CB9255EB28AECD980065F65D /* CalendarViewModel.swift in Sources */,
 				CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +512,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CB9255E728AEC5CA0065F65D /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -428,13 +528,31 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		CBA20DCB28ACE60F00374116 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CB9255E828AEC5CA0065F65D /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB9255E728AEC5CA0065F65D /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
+		};
 		CB92833B28ACC49D0048439A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CB92833A28ACC49D0048439A /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		CBA20DCC28ACE60F00374116 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CBA20DCB28ACE60F00374116 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
