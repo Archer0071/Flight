@@ -97,6 +97,7 @@ class StationsController:UIViewController{
     
     private func setupSearchController(){   /// Adding SearchController to Navigation Bar and setting delegate
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         searchController.searchBar.delegate = self
     }
     private func setupRefreshController(){ /// Adding  Listener  For  RefreshController on pulling CollectionvIew
