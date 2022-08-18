@@ -9,18 +9,16 @@ import Foundation
 import Combine
 import UIKit
 
+
 class StationsViewModel: ObservableObject {
-    
     @Published  var stations = [Station]()
     @Published  var oldData = [Station]()
-    @Published  var listLoadingError: String = ""
     @Published  var searchText:String = ""
     @Published  var searchCancel:Bool = false
     @Published  var showAlert: Bool = false
-    
+    @Published  var listLoadingError: String = ""
     private var cancellables: Set<AnyCancellable> = []
     let dataService : ServiceProtocol
-    
     init(dataService:ServiceProtocol) {
         self.dataService = dataService
         getList()
@@ -29,6 +27,7 @@ class StationsViewModel: ObservableObject {
         
         
     }
+    
     
     func getList() {
         dataService.fetchStations()

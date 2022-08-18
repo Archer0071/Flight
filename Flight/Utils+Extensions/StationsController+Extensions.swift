@@ -26,6 +26,11 @@ extension StationsController:UICollectionViewDelegate,UICollectionViewDataSource
         return cell
         
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedStation.send(viewModel.stationAt(indexPath: indexPath))
+        navigationController?.popViewController(animated: true)
+        
+    }
 
     
 }
