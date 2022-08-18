@@ -12,6 +12,8 @@ import Combine
 
 
 class FindFlightsController:UIViewController{
+    
+    let viewModel = FindFlightsViewModel()
     private var cancellables: Set<AnyCancellable> = []
     
     private let scrollView:UIScrollView = {
@@ -95,7 +97,7 @@ class FindFlightsController:UIViewController{
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    private let flyHStack:UIStackView = {
+    private let flyHStack: UIStackView = {
         let hStack = UIStackView(frame: .zero)
         hStack.axis = .horizontal
         hStack.distribution = .equalSpacing
@@ -104,7 +106,7 @@ class FindFlightsController:UIViewController{
         hStack.translatesAutoresizingMaskIntoConstraints = false
         return hStack
     }()
-    private let flyOutVstack:UIStackView = {
+    private let flyOutVstack: UIStackView = {
         let vStack = UIStackView(frame: .zero)
         vStack.axis = .vertical
         vStack.spacing = 0
@@ -131,7 +133,7 @@ class FindFlightsController:UIViewController{
         return label
     }()
     
-    private let flyImageVstack:UIStackView = {
+    private let flyImageVstack : UIStackView = {
         let vStack = UIStackView(frame: .zero)
         vStack.axis = .vertical
         vStack.spacing = 0
@@ -146,7 +148,7 @@ class FindFlightsController:UIViewController{
         return image
     }()
     
-    private let flyBackVstack:UIStackView = {
+    private let flyBackVstack : UIStackView = {
         let vStack = UIStackView(frame: .zero)
         vStack.axis = .vertical
         vStack.spacing = 0
@@ -172,7 +174,50 @@ class FindFlightsController:UIViewController{
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-
+    private let flyVStackSpacing : UIView = {
+        let view = UIView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    private let passengerVstack : UIStackView = {
+        let vStack = UIStackView(frame: .zero)
+        vStack.axis = .vertical
+        vStack.spacing = 2
+        vStack.translatesAutoresizingMaskIntoConstraints = false
+        return vStack
+    }()
+    private let passengerLabel : UILabel = {
+        let label = UILabel(frame: .zero)
+        label.text = "Passengers"
+        label.textColor = UIColor(light: .black, dark: .white)
+        label.numberOfLines = 0
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    private let passengerType : UILabel = {
+        let label = UILabel(frame: .zero)
+        label.text = "1 Adults(16+ years)"
+        label.textColor = UIColor(light: .black, dark: .white)
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    private let passengerVStackSpacing : UIView = {
+        let view = UIView(frame: .zero)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+    private let letsGoButton : UIButton = {
+         let button = UIButton(frame: .zero)
+         button.setTitle("Confirm", for: .normal)
+         button.backgroundColor = UIColor(light: .black, dark: .white)
+         button.setTitleColor(UIColor(light: .white, dark: .black), for: .normal)
+         button.translatesAutoresizingMaskIntoConstraints = false
+         return button
+         
+     }()
     
     override func viewDidLayoutSubviews() {
         configureUI()
@@ -193,12 +238,10 @@ class FindFlightsController:UIViewController{
         tripDetails.addArrangedSubview(toSeprator)
         tripDetails.addArrangedSubview(toSpacing)
         
-        
         flyOutVstack.addArrangedSubview(flyOutLabel)
         flyOutVstack.addArrangedSubview(flyOutDate)
         
         flyImageVstack.addArrangedSubview(flyImage)
-        
         
         flyBackVstack.addArrangedSubview(flyBackLabel)
         flyBackVstack.addArrangedSubview(flyBackDate)
@@ -206,8 +249,15 @@ class FindFlightsController:UIViewController{
         flyHStack.addArrangedSubview(flyOutVstack)
         flyHStack.addArrangedSubview(flyImageVstack)
         flyHStack.addArrangedSubview(flyBackVstack)
-    
+        
+        passengerVstack.addArrangedSubview(passengerLabel)
+        passengerVstack.addArrangedSubview(passengerType)
+        
         tripDetails.addArrangedSubview(flyHStack)
+        tripDetails.addArrangedSubview(flyVStackSpacing)
+        tripDetails.addArrangedSubview(passengerVstack)
+        tripDetails.addArrangedSubview(passengerVStackSpacing)
+        tripDetails.addArrangedSubview(letsGoButton)
         scrollView.addSubview(tripDetails)
         
         view.addSubview(scrollView)
@@ -238,8 +288,14 @@ class FindFlightsController:UIViewController{
             
             flyImage.widthAnchor.constraint(equalToConstant: 40),
             flyImage.heightAnchor.constraint(equalToConstant: 40),
+            flyVStackSpacing.heightAnchor.constraint(equalToConstant: 20),
             
+            passengerVStackSpacing.heightAnchor.constraint(equalToConstant: 20),
             
+            letsGoButton.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor,constant: 20),
+            letsGoButton.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor,constant: -20),
+            letsGoButton.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor,constant: -50),
+            letsGoButton.heightAnchor.constraint(equalToConstant: 40),
             
         ])
         
@@ -249,18 +305,17 @@ class FindFlightsController:UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fromButton.addTarget(target, action: #selector(selectFrom), for: .touchUpInside)
-        toButton.addTarget(target, action: #selector(selectTo), for: .touchUpInside)
-        tripType.addTarget(self, action: #selector(self.tripSelectionChanged(sender:)), for: UIControl.Event.valueChanged)
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.calenderPopView(sender:)))
-        flyHStack.addGestureRecognizer(tap)
-        
-
-        
+        setupGestures()
+        setupFlyTap()
+        setupPassengerTap()
         
     }
-   
-
+    func setupGestures(){
+        fromButton.addTarget(target, action: #selector(selectFrom), for: .touchUpInside)
+        toButton.addTarget(target, action: #selector(selectTo), for: .touchUpInside)
+        tripType.addTarget(self, action: #selector(self.tripSelectionChanged(sender:)), for: .valueChanged)
+    }
+    
     @objc func selectFrom(){
         let service = Service()
         let viewModel = StationsViewModel(dataService: service)
@@ -294,39 +349,52 @@ class FindFlightsController:UIViewController{
         }
     }
     
+    
+    func setupFlyTap(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.calenderPopView(sender:)))
+        flyHStack.addGestureRecognizer(tap)
+    }
+    
     @objc func calenderPopView(sender: UITapGestureRecognizer) {
         switch tripType.selectedSegmentIndex {
         case 0 :
-        let dateController = FastisController(mode: .range)
-        dateController.title = "Select Your Dates"
-        dateController.minimumDate = Date()
-        dateController.allowToChooseNilDate = true
-        dateController.doneHandler = { result in
-               if let result = result {
-                   self.flyOutDate.text =  result.fromDate.convertToString()
-                   self.flyBackDate.text = result.toDate.convertToString()
-               }
-           }
-        dateController.present(above: self)
-            
-        case 1:
-            let dateController = FastisController(mode: .single)
-            dateController.title = "Select Your Date"
-            dateController.minimumDate = Date()
-            dateController.allowToChooseNilDate = true
-            dateController.doneHandler = { result in
-                   if let result = result {
-                       self.flyOutDate.text =  result.convertToString()
-                       self.flyBackDate.text = "Select Date"
-                   }
-               }
-            dateController.present(above: self)
-            
+            let viewModel = CalendarViewModel(selectedDates: viewModel.selectedDates, isRange: true)
+            let calenderController = CalendarController(viewModel: viewModel)
+            calenderController.selectedDates.sink {[weak self] dates in
+                viewModel.selectedDates = dates
+                self?.flyOutDate.text = dates.first?.convertToString()
+                self?.flyBackDate.text = dates.last?.convertToString()
+            }.store(in: &cancellables)
+            present(calenderController, animated: true)
+        case 1 :
+            let viewModel = CalendarViewModel(selectedDates: viewModel.selectedDates, isRange: false)
+            let calenderController = CalendarController(viewModel: viewModel)
+            calenderController.selectedDates.sink {[weak self] dates in
+                viewModel.selectedDates = dates
+                self?.flyOutDate.text = dates.first?.convertToString()
+            }.store(in: &cancellables)
+            present(calenderController, animated: true)
         default:
             break
         }
+        
+            
     
     }
+    func setupPassengerTap(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.passengerPopView(sender:)))
+        passengerVstack.addGestureRecognizer(tap)
+    }
     
+    @objc func passengerPopView(sender: UITapGestureRecognizer) {
+        let passengerViewModel = PassengerViewModel(passengers:viewModel.passengers)
+        let vc = PassengerController(viewModel: passengerViewModel)
+        vc.passengers
+            .sink {[weak self] (passengers) in
+                self?.passengerType.text = self?.viewModel.getPassengers(passengers: passengers)
+        }.store(in: &cancellables)
+        present(vc, animated: true)
+        
+    }
     
 }
