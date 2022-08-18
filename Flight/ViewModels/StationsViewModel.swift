@@ -77,11 +77,9 @@ class StationsViewModel: ObservableObject {
     
     
     func searchList(searchText:String){
-        
         self.stations = oldData.filter {$0.name.contains(searchText) || $0.code.contains(searchText)}
         
     }
-    
     
     func createAlert( with error: NetworkError ) {
         listLoadingError = error.backendError == nil ? error.initialError.localizedDescription : error.backendError!.message
@@ -90,12 +88,13 @@ class StationsViewModel: ObservableObject {
     }
     
     func numberOfStations() -> Int {
-        
         return stations.count
+        
     }
     
     func stationAt(indexPath: IndexPath) -> Station {
         return stations[indexPath.row]
+        
     }
 }
 
