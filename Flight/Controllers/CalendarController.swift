@@ -114,7 +114,8 @@ class CalendarController:UIViewController{
         confirmButton.addTarget(self, action: #selector(confirm), for: .touchUpInside)
     }
     @objc func confirm(){
-        selectedDates.send(calendar.selectedDates)
+    
+        dismiss(animated: true)
     }
     func setupBindings(){
         viewModel.$isRange.sink {[weak self] isRange in
