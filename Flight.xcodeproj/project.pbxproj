@@ -18,6 +18,9 @@
 		CB9255EB28AECD980065F65D /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255EA28AECD980065F65D /* CalendarViewModel.swift */; };
 		CB9255ED28AEE7E60065F65D /* CalenderController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255EC28AEE7E60065F65D /* CalenderController+Extension.swift */; };
 		CB9255EF28AEE81E0065F65D /* PassengerController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255EE28AEE81E0065F65D /* PassengerController+Extension.swift */; };
+		CB9255F728AEFF1E0065F65D /* StationsViewModel_Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255F628AEFF1E0065F65D /* StationsViewModel_Test.swift */; };
+		CB9255FE28AEFF800065F65D /* MockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9255FD28AEFF800065F65D /* MockService.swift */; };
+		CB92560128AF004C0065F65D /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = CB92560028AF004C0065F65D /* data.json */; };
 		CB92831A28ACC1A00048439A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831928ACC1A00048439A /* AppDelegate.swift */; };
 		CB92831C28ACC1A00048439A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB92831B28ACC1A00048439A /* SceneDelegate.swift */; };
 		CB92832328ACC1A30048439A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB92832228ACC1A30048439A /* Assets.xcassets */; };
@@ -38,6 +41,16 @@
 		CBA6FA6C28AD3A3E00032AE7 /* FindFlightsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBA6FA6B28AD3A3E00032AE7 /* FindFlightsController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		CB9255F828AEFF1E0065F65D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB92830E28ACC1A00048439A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB92831528ACC1A00048439A;
+			remoteInfo = Flight;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		CB438A9A28AE332F00D97AB6 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		CB438AC628AE54F400D97AB6 /* PassengerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassengerController.swift; sourceTree = "<group>"; };
@@ -49,6 +62,10 @@
 		CB9255EA28AECD980065F65D /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		CB9255EC28AEE7E60065F65D /* CalenderController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CalenderController+Extension.swift"; sourceTree = "<group>"; };
 		CB9255EE28AEE81E0065F65D /* PassengerController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassengerController+Extension.swift"; sourceTree = "<group>"; };
+		CB9255F428AEFF1E0065F65D /* FlightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB9255F628AEFF1E0065F65D /* StationsViewModel_Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsViewModel_Test.swift; sourceTree = "<group>"; };
+		CB9255FD28AEFF800065F65D /* MockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockService.swift; sourceTree = "<group>"; };
+		CB92560028AF004C0065F65D /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		CB92831628ACC1A00048439A /* Flight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB92831928ACC1A00048439A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB92831B28ACC1A00048439A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +87,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CB9255F128AEFF1E0065F65D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB92831328ACC1A00048439A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,10 +107,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB9255F528AEFF1E0065F65D /* FlightTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB9255FF28AF000E0065F65D /* MockServices */,
+				CB9255F628AEFF1E0065F65D /* StationsViewModel_Test.swift */,
+			);
+			path = FlightTests;
+			sourceTree = "<group>";
+		};
+		CB9255FF28AF000E0065F65D /* MockServices */ = {
+			isa = PBXGroup;
+			children = (
+				CB92560028AF004C0065F65D /* data.json */,
+				CB9255FD28AEFF800065F65D /* MockService.swift */,
+			);
+			path = MockServices;
+			sourceTree = "<group>";
+		};
 		CB92830D28ACC1A00048439A = {
 			isa = PBXGroup;
 			children = (
 				CB92831828ACC1A00048439A /* Flight */,
+				CB9255F528AEFF1E0065F65D /* FlightTests */,
 				CB92831728ACC1A00048439A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				CB92831628ACC1A00048439A /* Flight.app */,
+				CB9255F428AEFF1E0065F65D /* FlightTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,6 +244,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CB9255F328AEFF1E0065F65D /* FlightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB9255FA28AEFF1E0065F65D /* Build configuration list for PBXNativeTarget "FlightTests" */;
+			buildPhases = (
+				CB9255F028AEFF1E0065F65D /* Sources */,
+				CB9255F128AEFF1E0065F65D /* Frameworks */,
+				CB9255F228AEFF1E0065F65D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB9255F928AEFF1E0065F65D /* PBXTargetDependency */,
+			);
+			name = FlightTests;
+			productName = FlightTests;
+			productReference = CB9255F428AEFF1E0065F65D /* FlightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CB92831528ACC1A00048439A /* Flight */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB92832A28ACC1A30048439A /* Build configuration list for PBXNativeTarget "Flight" */;
@@ -232,6 +294,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					CB9255F328AEFF1E0065F65D = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = CB92831528ACC1A00048439A;
+					};
 					CB92831528ACC1A00048439A = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -256,11 +322,20 @@
 			projectRoot = "";
 			targets = (
 				CB92831528ACC1A00048439A /* Flight */,
+				CB9255F328AEFF1E0065F65D /* FlightTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CB9255F228AEFF1E0065F65D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB92560128AF004C0065F65D /* data.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB92831428ACC1A00048439A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +348,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CB9255F028AEFF1E0065F65D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB9255F728AEFF1E0065F65D /* StationsViewModel_Test.swift in Sources */,
+				CB9255FE28AEFF800065F65D /* MockService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CB92831228ACC1A00048439A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -306,6 +390,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CB9255F928AEFF1E0065F65D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB92831528ACC1A00048439A /* Flight */;
+			targetProxy = CB9255F828AEFF1E0065F65D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		CB92832428ACC1A30048439A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -318,6 +410,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CB9255FB28AEFF1E0065F65D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QM47272HP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ryanair.FlightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flight.app/Flight";
+			};
+			name = Debug;
+		};
+		CB9255FC28AEFF1E0065F65D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2QM47272HP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Ryanair.FlightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flight.app/Flight";
+			};
+			name = Release;
+		};
 		CB92832828ACC1A30048439A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -491,6 +619,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CB9255FA28AEFF1E0065F65D /* Build configuration list for PBXNativeTarget "FlightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB9255FB28AEFF1E0065F65D /* Debug */,
+				CB9255FC28AEFF1E0065F65D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CB92831128ACC1A00048439A /* Build configuration list for PBXProject "Flight" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
